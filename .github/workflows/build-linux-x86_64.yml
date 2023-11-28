@@ -53,11 +53,11 @@ jobs:
         run: composer update --no-dev --classmap-authoritative
 
       # Cache downloaded source
-      - id: cache-download
-        uses: actions/cache@v3
-        with:
-          path: downloads
-          key: php-${{ inputs.version }}-dependencies-${{ inputs.extensions }}
+      #- id: cache-download
+      #  uses: actions/cache@v3
+      #  with:
+      #    path: downloads
+      #    key: php-${{ inputs.version }}-dependencies-${{ inputs.extensions }}
 
       # With or without debug
       - if: inputs.debug == true
